@@ -1,177 +1,98 @@
-import React from "react"
-import { ArrowRight, ChevronUp } from "lucide-react"
-import { Facebook } from "lucide-react"
+import React from "react";
+import { ArrowRight, ChevronUp, Instagram, Linkedin, Search, Youtube, } from "lucide-react";
+import { Facebook } from "lucide-react";
+import { FaSnapchatGhost, FaTiktok } from "react-icons/fa";
+
 
 export default function Footer() {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
-    })
-  }
+    });
+  };
 
   return (
-    <footer className="bg-[url(assets/images/)] bg-no-repeat bg-cover bg-white opacity-96 text-black w-full">
-      <div className="container mx-auto px-4 py-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Left section - Logo and Email Subscription */}
-          <div className="space-y-6">
-            <div className="font-bold text-2xl">ROYCARE</div>
-            <div className="space-y-4">
-              <h3 className="text-xl font-medium">Email That's you Get Offers</h3>
-              <p className="text-gray-600">Ut consequat semper viverra nam libero justo</p>
-              <div className="flex items-center border border-gray-300 rounded">
-                <input type="email" placeholder="Enter Mail ID" className="w-full p-3 bg-transparent outline-none" />
-                <button className="p-3">
-                  <ArrowRight className="h-5 w-5" />
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Information Column */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-medium">Information</h3>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className="hover:underline">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Faq
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Contact
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Reviews
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Help Column */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-medium">Help</h3>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className="hover:underline">
-                  Return Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Shipping Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Terms of Service
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Accessibility
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Account Login
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Support and Payment Gateway */}
-          <div className="space-y-8">
-            {/* Support Column */}
-            <div className="space-y-4">
-              <h3 className="text-xl font-medium">Social Media</h3>
-              <ul className="space-y-3">
-                <li className="flex items-center gap-2">
-                  <Facebook className="w-4 h-4 text-blue-600" />
-                  <a href="#" className="hover:underline">
-                    Facebook
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:underline">
-                    Beauty
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:underline">
-                    Wellness
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:underline">
-                    My Account
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:underline">
-                    Investors
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:underline">
-                    Gift Cards
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* Payment Gateway */}
-            <div className="space-y-4">
-              <h3 className="text-xl font-medium">Payment Gateway</h3>
-              <div className="grid grid-cols-2 gap-2">
-                <div className="flex items-center space-x-2 border border-gray-200 rounded p-2 bg-white">
-                  <img src="https://placeholder.com/60x20" alt="PayPal" width="60" height="20" />
-                  <span>Paypal</span>
-                </div>
-                <div className="flex items-center space-x-2 border border-gray-200 rounded p-2 bg-white">
-                  <img src="https://placeholder.com/60x20" alt="Visa" width="60" height="20" />
-                  <span>Visa</span>
-                </div>
-                <div className="flex items-center space-x-2 border border-gray-200 rounded p-2 bg-white">
-                  <img src="https://placeholder.com/60x20" alt="Mastercard" width="60" height="20" />
-                  <span>Mastercard</span>
-                </div>
-                <div className="flex items-center space-x-2 border border-gray-200 rounded p-2 bg-white">
-                  <img src="https://placeholder.com/60x20" alt="American Express" width="60" height="20" />
-                  <span>American Express</span>
-                </div>
-                <div className="flex items-center space-x-2 border border-gray-200 rounded p-2 bg-white">
-                  <img src="https://placeholder.com/60x20" alt="RuPay" width="60" height="20" />
-                  <span>RuPay</span>
-                </div>
-              </div>
-            </div>
-          </div>
+    <footer className="bg-[url(assets/images/)] bg-no-repeat bg-cover bg-white opacity-96 text-black w-screen min-h-50">
+      <div className="w-full flex flex-row justify-around p-20  ">
+        <div className="flex flex-col space-y-4">
+          <h1 className="text-3xl font-bold">Roycare</h1>
+          <p className="font-light">
+            AFB Golden Enterprise is a pioneering natural cosmetics company <br />
+            based in Oyarifa Accra, Ghana.  Roycare is our premium baby <br />
+            care brand, born from our deep commitment to providing the safest,<br />
+            most natural care for delicate baby skin, hair, and daily
+            needs.
+          </p>
         </div>
-      </div>
+        <div className="flex flex-col space-y-4 pl-5 ">
+          <h1 className="text-2xl font-bold">Navigations</h1>
+          <ul className="space-y-4 font-light">
+            <li className="cursor-pointer hover:text-blue-300">About Us</li>
+            <li className="cursor-pointer hover:text-blue-300">Shop</li>
+            <li className="cursor-pointer hover:text-blue-300">Testinomials</li>
+            <li className="cursor-pointer hover:text-blue-300">Contact</li>
+          </ul>
+        </div>
+
+        <div className="flex flex-col space-y-4 pl-5">
+        <h1 className="text-2xl font-bold">Follow Us</h1>
+         <a href="https://web.facebook.com/people/Roy-Car/pfbid035RSFepXsUYh599f6cwdGACwpo28u7nD6A7J8hczQ" target="_blank" rel="noopener noreferrer" className="flex space-x-2" >
+            <Facebook className="cursor-pointer hover:text-[#466C00] font-light" /> 
+            <p> Facebook</p>
+          </a>
+        
+          <a href="https://www.youtube.com/@Roycare360" target="_blank" rel="noopener noreferrer" className="flex space-x-2" >
+            <Youtube className="cursor-pointer hover:text-[#466C00] font-light" />
+            <p> Youtube</p>
+          </a>
+        
+          <a href="https://www.instagram.com/roycare360/" target="_blank" rel="noopener noreferrer" className="flex space-x-2">
+            <Instagram className="cursor-pointer hover:text-[#466C00] font-light"  />
+            <p> Instagram</p>
+          </a>
+
+          <a href="https://www.linkedin.com/in/roycare-659009365/" target="_blank" rel="noopener noreferrer" className="flex space-x-2">
+            <Linkedin className="cursor-pointer hover:text-[#466C00] font-light" />
+            <p> LinkedIn</p>
+          </a>
+
+         <a href="https://www.snapchat.com/add/roycare360" target="_blank" rel="noopener noreferrer" className="flex space-x-2">
+            <FaSnapchatGhost className="text-2xl cursor-pointer hover:text-[#466C00]" />
+            <p> SnapChat</p>
+          </a>
+          
+         <a href="https://www.tiktok.com/@roycare" target="_blank" rel="noopener noreferrer" className="flex space-x-2">
+            <FaTiktok className="text-2xl cursor-pointer hover:text-[#466C00]" />
+            <p> TikTok</p>
+          </a>
+        </div>
+        <div className="w-80 max-w-md mx-auto">
+          <form action="/search" method="GET" className="flex items-center border border-gray-300 rounded-md overflow-hidden">
+            <input
+              type="text"
+              name="query"
+              placeholder="Search products..."
+              className="w-full px-4 py-2 text-sm outline-none"
+            />
+            <button
+              type="submit"
+              className="bg-[#466C00] text-white px-4 py-2 hover:bg-[#365200] transition-colors"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+        </div>
+
+       
 
       {/* Bottom Footer */}
-      <div className="border-t border-gray-300 py-4 px-4 relative">
+      <div className="border-t border-black py-4 px-4 relative pt-20">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-          <div className="text-sm text-gray-600 mb-4 md:mb-0">© 2023 AMIY, Wedesign Tech.</div>
+          <div className="text-sm text-gray-600 mb-4 md:mb-0">
+            © 2023 AMIY, Wedesign Tech.
+          </div>
           <div className="flex space-x-4 text-sm">
             <a href="#" className="hover:underline">
               Terms & Conditions
@@ -191,5 +112,5 @@ export default function Footer() {
         </button>
       </div>
     </footer>
-  )
+  );
 }
