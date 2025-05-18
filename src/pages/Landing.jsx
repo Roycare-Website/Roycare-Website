@@ -296,12 +296,6 @@ const Landing = () => {
                             Made with organic ingredients that nourish and strengthen
                             every strand, giving you the healthy, vibrant hair you deserve.
                         </p>
-
-                        {/* <div className="mt-8">
-        <p className="text-amber-800 mb-2">Monday - Thursday : 11AM - 5PM</p>
-        <p className="text-amber-800 mb-2">Friday - Sunday : 10AM - 5PM</p>
-        <p className="text-amber-800">Sunday : Holiday</p>
-      </div> */}
                     </div>
                 </div>
 
