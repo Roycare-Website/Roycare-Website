@@ -69,7 +69,7 @@ const statusColor = {
 const Orders = () => {
   // Pagination state
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 3; // Number of orders to display per page
+  const itemsPerPage = 10; // Number of orders to display per page
   
   // Calculate total number of pages
   const totalItems = orders.length;
