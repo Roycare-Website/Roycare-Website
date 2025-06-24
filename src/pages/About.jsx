@@ -39,7 +39,7 @@ const About = () => {
               welcomed her son, Charles Roy Cleon Darkey Ocansey (affectionately
               called Roy), into the world, she searched for baby care products
               that were safe, gentle, and truly pure but found many filled with
-              harsh chemicals and synthetic additives.
+              harsh chemicals and synthetic additives..
             </p>
             <p>
               Determined to create better, she envisioned Roycare: a premium
