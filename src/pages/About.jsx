@@ -1,5 +1,5 @@
 import React from "react";
-import Product from "../assets/images/Alice.jpg";
+import Alice from "../assets/images/Alice.jpg";
 import Leave from "../assets/images/leave.png";
 import World from "../assets/images/globe.png";
 import Bowl from "../assets/images/bowl.png";
@@ -19,7 +19,7 @@ const About = () => {
           {/* Left Images */}
           <div className="w-[50%] h-screen">
             <img
-              src={Product}
+              src={Alice}
               alt="CEO Picture"
               className="rounded-2xl w-screen h-screen object-contain row-span-2"
             />
