@@ -59,203 +59,117 @@ const Landing = () => {
     return (
         <div className="w-full min-h-screen overflow-hidden">
             {/* Existing sections remain unchanged */}
-            <section className="flex flex-col md:flex-row w-screen  h-screen">
-                {/* Left Panel - Person with Product */}
-                <div className="w-full md:w-1/3 relative md:h-full">
+            <section className="flex flex-col lg:flex-row w-full min-h-screen">
+                {/* Left Panel */}
+                <div className="w-full lg:w-1/3 h-64 lg:h-auto">
                     <img
                         src={Product2}
                         alt="Person applying serum"
-                        width={450}
-                        height={600}
                         className="w-full h-full object-cover"
                     />
                 </div>
 
-                {/* Center Panel - Text Content */}
-                <div className="w-full md:w-1/3 flex flex-col items-center justify-center text-center px-8 py-12 relative bg-[#466C00]">
-                    <span className="uppercase tracking-wider text-sm mb-4 text-white font-light">
+                {/* Center Panel */}
+                <div className="w-full lg:w-1/3 flex flex-col items-center justify-center text-center px-6 py-12 bg-[#FCD8D4]">
+                    <span className="uppercase tracking-wider text-sm mb-4 text-black font-light">
                         Best Price
                     </span>
-                    <h2 className="text-4xl font-serif text-white mb-6">
+                    <h2 className="text-3xl md:text-4xl font-serif text-[#47603D] mb-6">
                         Care Today
                         <br />
                         Green Tomorrow
                     </h2>
-                    <p className="text-white mb-10 max-w-xs">
-                        We invite you to join our movement: nurturing little ones with
-                        products that are pure, sustainable, and made with unconditional
-                        love. Because when it comes to babies, only the best — and greenest
-                        — will do
+                    <p className="text-black mb-10 max-w-md">
+                        We invite you to join our movement: nurturing little ones with products that are pure, sustainable, and made with unconditional love. Because when it comes to babies, only the best — and greenest — will do
                     </p>
-                    <button className="bg-black  text-white py-3 px-8 uppercase tracking-wider text-sm flex items-center space-x-2 hover:bg-[#83e580] transition-colors duration-300">
-                        <span>—</span>
-                        <span>Shop</span>
-                        <span>—</span>
+                    <button className="bg-[#47603D] text-white py-3 px-6 uppercase tracking-wider text-sm hover:bg-[#81a581] transition-colors duration-300 rounded-2xl">
+                        — Shop —
                     </button>
                 </div>
 
-                {/* Right Panel - Product Display */}
-                <div className="w-full md:w-1/3 relative md:h-full">
+                {/* Right Panel */}
+                <div className="w-full lg:w-1/3 h-64 lg:h-auto">
                     <img
                         src={Product2}
-                        alt="Natural cosmetic products on wooden board"
-                        width={450}
-                        height={600}
+                        alt="Natural cosmetic products"
                         className="w-full h-full object-cover"
                     />
                 </div>
             </section>
 
-            <div className="bg-black py-4 overflow-hidden relative h-20">
-                <div className="flex animate-scroll">
-                    {/* First set of products */}
-                    <div className="flex items-center whitespace-nowrap">
-                        {products.map((product, index) => (
-                            <div key={`first-${index}`} className="flex items-center">
-                                <span className="text-amber-100 text-lg font-medium px-8">
-                                    {product}
-                                </span>
-                                <span className="text-amber-300 text-2xl">✦</span>
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Duplicate set for seamless loop */}
-                    <div className="flex items-center whitespace-nowrap">
-                        {products.map((product, index) => (
-                            <div key={`second-${index}`} className="flex items-center">
-                                <span className="text-amber-100 text-lg font-medium px-8">
-                                    {product}
-                                </span>
-                                <span className="text-amber-300 text-2xl">✦</span>
-                            </div>
-                        ))}
-                    </div>
+            {/* Scrolling Section */}
+            <div className="bg-black py-4 overflow-hidden">
+                <div className="flex animate-scroll w-max">
+                    {[...products, ...products].map((product, index) => (
+                        <div key={index} className="flex items-center px-4 whitespace-nowrap">
+                            <span className="text-amber-100 text-sm font-medium">{product}</span>
+                            <span className="text-amber-300 text-lg px-2">✦</span>
+                        </div>
+                    ))}
                 </div>
-
                 <style jsx>{`
-          @keyframes scroll {
-            0% {
-              transform: translateX(0);
-            }
-            100% {
-              transform: translateX(-50%);
-            }
-          }
-
-          .animate-scroll {
-            animation: scroll 15s linear infinite;
-          }
-        `}</style>
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+    .animate-scroll {
+      animation: scroll 20s linear infinite;
+    }
+    @media (max-width: 640px) {
+      .animate-scroll {
+        animation-duration: 30s;
+      }
+    }
+  `}</style>
             </div>
 
-            {/* shop Categories */}
-            <section>
-                <h1 className="text-[#466C00] text-4xl font-serif text-center mb-12 p-10">
+            {/* Shop Categories */}
+            <section className="px-4 sm:px-6 md:px-10 py-10">
+                <h1 className="text-[#47603D] text-3xl md:text-4xl font-serif text-center mb-10">
                     Shop Categories
                 </h1>
-                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {/* Product 1 */}
-                    <div className="h-full rounded-lg overflow-hidden flex flex-col shadow-xl/30">
-                        <div className="h-80 p-8 flex items-center justify-center">
-                            <img
-                                src={Product2}
-                                alt="Oil-Free Liquid Foundation"
-                                className="h-full object-contain"
-                            />
-                        </div>
-                        <div className="p-6 flex flex-col items-center">
-                            <div className="flex mb-2">
-                                {[1, 2, 3, 4, 5].map((star) => (
-                                    <svg
-                                        key={star}
-                                        className="w-5 h-5 text-gray-300"
-                                        fill="currentColor"
-                                        viewBox="0 0 20 20"
-                                    >
-                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                    </svg>
-                                ))}
+                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {[1, 2, 3].map((i) => (
+                        <div
+                            key={i}
+                            className="rounded-lg overflow-hidden shadow-lg flex flex-col h-full"
+                        >
+                            <div className="h-72 p-4 flex items-center justify-center bg-white">
+                                <img
+                                    src={Product2}
+                                    alt="Product"
+                                    className="h-full object-contain"
+                                />
                             </div>
-                            <span className="uppercase text-sm font-bold tracking-wider text-[#6d2e2e] mb-1">
-                                Baby Skincare
-                            </span>
-                            <h3 className="text-xl font-medium text-center">
-                                Premium baby skincare
-                            </h3>
-                            <button className="mt-4 bg-[#466C00] text-white py-3 px-6 w-full uppercase tracking-wider text-sm hover:bg-[#466C00] transition-colors duration-300">
-                                Select Options
-                            </button>
-                        </div>
-                    </div>
-
-                    {/* Product 2 */}
-                    <div className="rounded-lg overflow-hidden flex flex-col relative shadow-xl/30  h-full">
-                        <div className="h-80 p-8 flex items-center justify-center">
-                            <img
-                                src={Product2}
-                                alt="Oil-Free Liquid Foundation"
-                                className="h-full object-contain"
-                            />
-                        </div>
-                        {/* Text overlay with semi-transparent background */}
-                        <div className="p-6 flex flex-col items-center justify-end flex-grow ">
-                            <span className="uppercase text-sm font-bold tracking-wider text-[#6d2e2e]  mb-1">
-                                Bath & Hygiene
-                            </span>
-                            <h3 className="text-xl font-medium text-center">
-                                Baby shampoo sensitive skin
-                            </h3>
-                            <button className="mt-4 bg-[#466C00] text-white py-3 px-6 w-full uppercase tracking-wider text-sm hover:bg-[#466C00] transition-colors duration-300">
-                                Select Options
-                            </button>
-                        </div>
-                    </div>
-
-
-                    {/* Product 3 */}
-                    <div className="rounded-lg overflow-hidden flex flex-col relative shadow-xl/30">
-                        <div className="h-80 p-8 flex items-center justify-center bg-white">
-                            <img
-                                src={Product2}
-                                alt="Ultra Dry Skin Moisturizer"
-                                className="h-full object-contain"
-                            />
-                        </div>
-                        <div className="p-6 flex flex-col items-center">
-                            <div className="flex mb-2">
-                                {[1, 2, 3].map((star) => (
-                                    <svg
-                                        key={star}
-                                        className="w-5 h-5 text-yellow-400"
-                                        fill="currentColor"
-                                        viewBox="0 0 20 20"
-                                    >
-                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                    </svg>
-                                ))}
-                                {[1, 2].map((star) => (
-                                    <svg
-                                        key={star}
-                                        className="w-5 h-5 text-gray-300"
-                                        fill="currentColor"
-                                        viewBox="0 0 20 20"
-                                    >
-                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                    </svg>
-                                ))}
+                            <div className="p-6 flex flex-col items-center flex-1">
+                                <div className="flex mb-2">
+                                    {[1, 2, 3, 4, 5].map((star) => (
+                                        <svg
+                                            key={star}
+                                            className="w-4 h-4 text-yellow-400"
+                                            fill="currentColor"
+                                            viewBox="0 0 20 20"
+                                        >
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                    ))}
+                                </div>
+                                <span className="uppercase text-sm font-bold tracking-wider text-[#6d2e2e] mb-1">
+                                    {i === 1 ? "Baby Skincare" : i === 2 ? "Bath & Hygiene" : "Laundry & Home Care"}
+                                </span>
+                                <h3 className="text-lg font-medium text-center">
+                                    {i === 1 ? "Premium baby skincare" : i === 2 ? "Baby shampoo sensitive skin" : "Organic baby detergent"}
+                                </h3>
+                                <button className="mt-4 bg-[#47603D] text-white py-2 px-4 w-full uppercase tracking-wider text-sm hover:bg-[#466C00] transition-colors duration-300 rounded-2xl">
+                                    Select Options
+                                </button>
                             </div>
-                            <span className="uppercase text-sm font-bold tracking-wider text-[#6d2e2e] mb-1">
-                                Laundry & Home Care
-                            </span>
-                            <h3 className="text-xl font-medium text-center">
-                                Organic baby detergent
-                            </h3>
-                            <button className="mt-4 bg-[#466C00] text-white py-3 px-6 w-full uppercase tracking-wider text-sm hover:bg-[#466C00] transition-colors duration-300">
-                                Select Options
-                            </button>
                         </div>
-                    </div>
+                    ))}
                 </div>
             </section>
 
@@ -269,7 +183,7 @@ const Landing = () => {
                         <span className="text-sm uppercase tracking-wider text-gray-500 mb-2 block">
                             Premium Collection
                         </span>
-                        <h1 className="text-3xl md:text-5xl font-serif mb-4">
+                        <h1 className="text-3xl md:text-5xl font-serif mb-4 text-[#47603D]">
                             Natural Moisturizing Cream
                         </h1>
                         <div className="flex items-center mb-6">
@@ -295,7 +209,7 @@ const Landing = () => {
                             against environmental stressors and improves skin texture.
                         </p>
                         <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3">
-                            <button className="bg-[#466C00] text-white py-3 px-8  hover:bg-[#466C00] transition-colors duration-300 flex-1">
+                            <button className="bg-[#47603D] text-white py-3 px-8  hover:bg-[#466C00] transition-colors duration-300 flex-1 rounded-2xl">
                                 Shop
                             </button>
                         </div>
@@ -304,14 +218,14 @@ const Landing = () => {
             </section>
 
             {/* testimonials */}
-            <section className="w-full  bg-[url(assets/images/footerbg.jpg)] bg-cover bg-no-repeat mt-7  ">
+            <section className="w-full  bg-[#FCD8D4] mt-7  ">
                 <div className="max-w-7xl mx-auto py-16 px-4 md:pt-8">
                     <div className="flex flex-col lg:flex-row">
                         <div className="lg:w-1/3 mb-8 lg:mb-0">
                             <h3 className="text-sm font-semibold text-gray-600 uppercase tracking-wider">
                                 Premium Clients
                             </h3>
-                            <h2 className="text-4xl font-bold text-gray-900 mt-2">
+                            <h2 className="text-4xl font-bold text-[#47603D] mt-2">
                                 Testimonials & Review
                             </h2>
                             <p className="text-gray-600 mt-4">
@@ -321,7 +235,7 @@ const Landing = () => {
                             <div className="mt-6 flex space-x-4">
                                 <button
                                     onClick={handlePrev}
-                                    className="bg-[#466C00] p-2 rounded-full hover:bg-gray-400"
+                                    className="bg-[#47603D] p-2 rounded-full hover:bg-gray-400"
                                     disabled={currentPage === 0}
                                 >
                                     <svg
@@ -340,7 +254,7 @@ const Landing = () => {
                                 </button>
                                 <button
                                     onClick={handleNext}
-                                    className="bg-[#466C00] p-2 rounded-full hover:bg-gray-400"
+                                    className="bg-[#47603D] p-2 rounded-full hover:bg-gray-400"
                                     disabled={currentPage === totalPages - 1}
                                 >
                                     <svg
@@ -402,7 +316,7 @@ const Landing = () => {
             <section className="w-full py-16 px-4 md:px-8 bg-white">
                 <div className="max-w-4xl mx-auto">
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#47603D]">
                             Frequently Asked Questions
                         </h2>
                         <p className="text-gray-600 max-w-2xl mx-auto">
@@ -489,14 +403,14 @@ const Landing = () => {
             {/* Contact */}
             <section className="flex flex-col md:flex-row w-full">
                 {/* Left side - Company info */}
-                <div className="w-full md:w-1/2 bg-amber-50 p-8 md:p-12 lg:p-16 flex flex-col justify-center relative">
+                <div className="w-full md:w-1/2 bg-[#FCD8D4] p-8 md:p-12 lg:p-16 flex flex-col justify-center relative">
                     <div className="absolute inset-0 opacity-10">
                         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                             <svg
                                 width="300"
                                 height="300"
                                 viewBox="0 0 100 100"
-                                className="text-amber-800"
+                                className="text-[#47603D]"
                             >
                                 <path
                                     d="M50 0 C60 20 80 20 90 10 C95 40 70 60 50 70 C30 60 5 40 10 10 C20 20 40 20 50 0"
@@ -508,15 +422,15 @@ const Landing = () => {
                         </div>
                     </div>
                     <div className="relative z-10">
-                        <h3 className="uppercase tracking-widest text-amber-800 text-sm font-bold mb-3">
+                        <h3 className="uppercase tracking-widest text-black text-sm font-bold mb-3">
                             SATISFACTION GUARANTEE
                         </h3>
-                        <h2 className="text-4xl font-serif text-amber-900 mb-6">
+                        <h2 className="text-4xl font-serif text-[#47603D] mb-6">
                             Try Our Incredible
                             <br />
                             Baby shampoo sensitive skin.
                         </h2>
-                        <p className="text-amber-700 mb-12">
+                        <p className="text-black mb-12">
                             Transform your hair naturally with our premium products. Made with
                             organic ingredients that nourish and strengthen every strand,
                             giving you the healthy, vibrant hair you deserve.
@@ -525,7 +439,7 @@ const Landing = () => {
                 </div>
 
                 {/* Right side - Contact form */}
-                <div className="w-full md:w-1/2 bg-[#466C00] p-8 md:p-12 lg:p-16 flex flex-col justify-center relative">
+                <div className="w-full md:w-1/2 bg-[#47603D] p-8 md:p-12 lg:p-16 flex flex-col justify-center relative">
                     <h3 className="uppercase tracking-widest text-amber-100 text-sm font-bold mb-3">
                         CONTACT US
                     </h3>
@@ -576,11 +490,6 @@ const Landing = () => {
                                 <span className="ml-2">-</span>
                             </button>
                         </div>
-                    </div>
-                    <div className="absolute bottom-6 right-6">
-                        <button className="p-2 bg-amber-800 rounded-full text-amber-100 hover:bg-amber-700 transition duration-300">
-                            <ChevronUpSquareIcon size={20} />
-                        </button>
                     </div>
                 </div>
             </section>

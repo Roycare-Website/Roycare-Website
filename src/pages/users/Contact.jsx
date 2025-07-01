@@ -4,10 +4,10 @@ import { FaFacebook, FaSnapchat, FaSnapchatGhost, FaTiktok } from 'react-icons/f
 
 const Contact = () => {
   return (
-    <section className="w-full min-h-screen py-16 px-4 md:px-8 bg-white">
-      <div className="w-full min-h-screen py-10 px-4 md:px-8 bg-white">
+    <section className="w-full min-h-screen py-16 px-4 md:px-8 bg-[#FCD8D4]">
+      <div className="w-full min-h-screen py-10 px-4 md:px-8 bg-[#FCD8D4]">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-gray-800 mb-8">
+          <h2 className="text-6xl font-bold text-center text-[#47603D] mb-8">
             Contact Us
           </h2>
           <p className="text-center text-gray-600 mb-12">
@@ -26,7 +26,7 @@ const Contact = () => {
                 id="name"
                 name="name"
                 required
-                className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-[#4A7807] focus:border-[#4A7807]"
+                className="mt-1 block w-full p-3 border border-black rounded-md shadow-sm focus:ring-[#47603D] focus:border-[#4A7807]"
               />
             </div>
 
@@ -40,7 +40,7 @@ const Contact = () => {
                 id="email"
                 name="email"
                 required
-                className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-[#4A7807] focus:border-[#4A7807]"
+                className="mt-1 block w-full p-3 border border-black rounded-md shadow-sm focus:ring-[#47603D] focus:border-[#4A7807]"
               />
             </div>
 
@@ -54,14 +54,14 @@ const Contact = () => {
                 name="message"
                 rows="5"
                 required
-                className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-[#4A7807] focus:border-[#4A7807]"
+                className="mt-1 block w-full p-3 border border-black rounded-md shadow-sm focus:ring-[#47603D] focus:border-[#4A7807]"
               ></textarea>
             </div>
 
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-[#4A7807] text-white py-3 px-6 rounded-md hover:bg-[#3b6405] transition"
+              className="w-full bg-[#47603D] text-white py-3 px-6  hover:bg-[#3b6405] transition rounded-2xl"
             >
               Send Message
             </button>

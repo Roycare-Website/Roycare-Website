@@ -13,9 +13,9 @@ import { Compass, Target } from "lucide-react";
 const About = () => {
   return (
     <div className="overflow-hidden">
-      <div className="flex flex-col justify-center min-h-86 bg-[#4A7807] items-center">
-        <h1 className="font-bold text-3xl text-white">About</h1>
-        <p className="text-white">Home / About</p>
+      <div className="flex flex-col justify-center min-h-86 bg-[#FCD8D4] items-center">
+        <h1 className="font-bold text-6xl text-[#47603D]">About</h1>
+        <p className="text-[#47603D]">Home / About</p>
       </div>
       <section className="py-12 bg-white text-black">
         <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center min-h-screen">
@@ -34,7 +34,7 @@ const About = () => {
             <h3 className="text-sm font-semibold tracking-widest uppercase mb-2">
               Roycare Brand Story
             </h3>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-[#4A7807]">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-[#47603D]">
               Born from Love, Inspired by Nature.
             </h2>
             <p className="mb-6 text-base sm:text-lg">
@@ -60,7 +60,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="w-full bg-[#4A7807] py-10 px-4">
+      <section className="w-full bg-[#47603D] py-10 px-4">
         <div className="text-center mb-8">
           <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl text-white leading-snug">
             Roycare is proud to be a 100% Green Brand
@@ -104,7 +104,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Purpose</h2>
-            <div className="w-20 h-1 bg-[#4A7807] mx-auto"></div>
+            <div className="w-20 h-1 bg-[#47603D] mx-auto"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
@@ -207,7 +207,7 @@ const About = () => {
         aria-labelledby="statistics-heading"
       >
         {/* Background overlay for texture */}
-        <div className="absolute inset-0 bg-[#4A7807] bg-opacity-20"></div>
+        <div className="absolute inset-0 bg-[#47603D] bg-opacity-20"></div>
 
         {/* Decorative background elements */}
         <div className="absolute top-0 left-0 w-full h-full opacity-10">
@@ -345,7 +345,7 @@ const About = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {/* Value 1 */}
             <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-[#4A7807] mb-2">
+              <h3 className="text-xl font-semibold text-[#47603D] mb-2">
                 Safety First
               </h3>
               <p className="text-gray-600">
@@ -356,7 +356,7 @@ const About = () => {
 
             {/* Value 2 */}
             <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-[#4A7807] mb-2">
+              <h3 className="text-xl font-semibold text-[#47603D] mb-2">
                 Plant-Powered Purity
               </h3>
               <p className="text-gray-600">
@@ -367,7 +367,7 @@ const About = () => {
 
             {/* Value 3 */}
             <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-[#4A7807] mb-2">
+              <h3 className="text-xl font-semibold text-[#47603D] mb-2">
                 Mother-Led Integrity
               </h3>
               <p className="text-gray-600">
@@ -378,7 +378,7 @@ const About = () => {
 
             {/* Value 4 */}
             <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-[#4A7807] mb-2">
+              <h3 className="text-xl font-semibold text-[#47603D] mb-2">
                 Love in Every Drop
               </h3>
               <p className="text-gray-600">
@@ -389,7 +389,7 @@ const About = () => {
 
             {/* Value 5 */}
             <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-[#4A7807] mb-2">
+              <h3 className="text-xl font-semibold text-[#47603D] mb-2">
                 Sustainability
               </h3>
               <p className="text-gray-600">Sustainability</p>
@@ -414,7 +414,7 @@ const About = () => {
               <img
                 src={Alice} // Replace with actual image path
                 alt="Alice Frimpomaa Boateng"
-                className="w-32 h-32 object-cover rounded-full border-4 border-[#4A7807] mb-4"
+                className="w-32 h-32 object-cover rounded-full border-4 border-[#47603D] mb-4"
               />
               <h3 className="text-lg font-semibold text-gray-800">
                 Alice Frimpomaa Boateng
