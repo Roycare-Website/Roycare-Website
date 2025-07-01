@@ -185,8 +185,8 @@ const Blog = () => {
           {post.excerpt}
         </p>
         <button 
-          className="px-6 py-2 text-white text-sm font-medium tracking-wide uppercase transition-colors duration-300 hover:opacity-90"
-          style={{ backgroundColor: '#466C00' }}
+          className="px-6 py-2 text-white text-sm font-medium tracking-wide uppercase transition-colors duration-300 hover:opacity-90 rounded-2xl"
+          style={{ backgroundColor: '#47603D' }}
         >
           Read More
         </button>
@@ -212,16 +212,16 @@ const Blog = () => {
   );
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#466C00' }}>
+    <div className="min-h-screen" style={{ backgroundColor: '#FCD8D4' }}>
       {/* Hero Section */}
       <div className="text-center py-20 px-4">
-        <h1 className="text-5xl font-light text-white mb-6 tracking-wide">
+        <h1 className="text-6xl font-bold text-[#47603D] mb-6">
           Blog
         </h1>
-        <div className="flex items-center justify-center space-x-3 text-white text-sm tracking-widest">
+        <div className="flex items-center justify-center space-x-3 text-[#47603D] text-sm tracking-widest">
           <span className="hover:text-opacity-80 cursor-pointer transition-colors">HOME</span>
-          <span className="text-white text-opacity-60">/</span>
-          <span className="text-white text-opacity-80">BLOG</span>
+          <span className="text-[#47603D] text-opacity-60">/</span>
+          <span className="text-[#47603D] text-opacity-80">BLOG</span>
         </div>
       </div>
 

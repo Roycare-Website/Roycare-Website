@@ -149,10 +149,10 @@ const Shop = () => {
       </div>
 
       {/* Search and Filter Section */}
-      <div className="bg-gray-50 py-6">
+      <div className="bg-[#FCD8D4] py-6">
         <div className="max-w-7xl mx-auto px-4">
           {/* Search Bar */}
-          <div className="flex flex-col sm:flex-row gap-4 items-center justify-between mb-4">
+          <div className="flex flex-col sm:flex-row gap-4 items-center justify-between mb-4 ">
             <div className="flex-1 max-w-md">
               <div className="relative">
                 <input
@@ -160,12 +160,12 @@ const Shop = () => {
                   placeholder="Search products..."
                   value={searchTerm}
                   onChange={handleSearchChange}
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg text-sm 
-                           focus:outline-none focus:ring-2 focus:ring-[#4A7807] focus:border-[#4A7807]
+                  className="w-full pl-10 pr-4 py-3 border border-black rounded-lg text-sm 
+                           focus:outline-none focus:ring-2 focus:ring-[#47603D] focus:border-[#47603D]
                            shadow-sm"
                 />
                 <svg
-                  className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"
+                  className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-[#47603D]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -184,7 +184,7 @@ const Shop = () => {
             <div className="flex items-center gap-2">
               <label
                 htmlFor="currency-select"
-                className="text-sm font-medium text-gray-700"
+                className="text-sm font-medium text-black"
               >
                 Currency:
               </label>
@@ -192,8 +192,8 @@ const Shop = () => {
                 id="currency-select"
                 value={selectedCurrency}
                 onChange={handleCurrencyChange}
-                className="border border-gray-300 px-4 py-3 rounded-lg text-sm text-gray-700 shadow-sm 
-                         focus:outline-none focus:ring-2 focus:ring-[#4A7807] focus:border-[#4A7807]"
+                className="border border-black px-4 py-3 rounded-lg text-sm text-black shadow-lg 
+                         focus:outline-none focus:ring-2 focus:ring-[#47603D] focus:border-[#47603D]"
               >
                 <option value="USD">USD ($)</option>
                 <option value="GHS">GHS (₵)</option>
@@ -205,7 +205,7 @@ const Shop = () => {
             {/* Filter Toggle Button */}
             <button
               onClick={() => setShowFilters(!showFilters)}
-              className="flex items-center gap-2 px-4 py-3 bg-[#4A7807] text-white rounded-lg
+              className="flex items-center gap-2 px-4 py-3 bg-[#47603D] text-white rounded-lg
                        hover:bg-[#3b6405] transition-colors font-medium shadow-sm"
             >
               <svg
@@ -227,7 +227,7 @@ const Shop = () => {
 
           {/* Filter Options */}
           {showFilters && (
-            <div className="bg-white p-6 rounded-lg shadow-md border">
+            <div className="bg-white p-6 rounded-lg shadow-lg border">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* Category Filter */}
                 <div>
@@ -237,8 +237,8 @@ const Shop = () => {
                   <select
                     value={selectedCategory}
                     onChange={handleCategoryChange}
-                    className="w-full border border-gray-300 px-3 py-2 rounded-md text-sm
-                             focus:outline-none focus:ring-2 focus:ring-[#4A7807] focus:border-[#4A7807]"
+                    className="w-full border border-gray-300 px-3 py-2 rounded-lg text-sm
+                             focus:outline-none focus:ring-2 focus:ring-[#47603D] focus:border-[#4A7807]"
                   >
                     <option value="All">All Categories</option>
                     {categories.map(category => (
@@ -258,7 +258,7 @@ const Shop = () => {
                     value={stockFilter}
                     onChange={handleStockFilterChange}
                     className="w-full border border-gray-300 px-3 py-2 rounded-md text-sm
-                             focus:outline-none focus:ring-2 focus:ring-[#4A7807] focus:border-[#4A7807]"
+                             focus:outline-none focus:ring-2 focus:ring-[#47603D] focus:border-[#4A7807]"
                   >
                     <option value="All">All Products</option>
                     <option value="In Stock">In Stock</option>
@@ -279,7 +279,7 @@ const Shop = () => {
                       value={priceRange[0]}
                       onChange={(e) => handlePriceRangeChange(e, 0)}
                       className="w-20 border border-gray-300 px-2 py-1 rounded text-sm
-                               focus:outline-none focus:ring-1 focus:ring-[#4A7807]"
+                               focus:outline-none focus:ring-1 focus:ring-[#47603D]"
                       placeholder="Min"
                     />
                     <span className="text-gray-500">-</span>
@@ -290,7 +290,7 @@ const Shop = () => {
                       value={priceRange[1]}
                       onChange={(e) => handlePriceRangeChange(e, 1)}
                       className="w-20 border border-gray-300 px-2 py-1 rounded text-sm
-                               focus:outline-none focus:ring-1 focus:ring-[#4A7807]"
+                               focus:outline-none focus:ring-1 focus:ring-[#47603D]"
                       placeholder="Max"
                     />
                   </div>
@@ -345,7 +345,7 @@ const Shop = () => {
             </p>
             <button
               onClick={clearFilters}
-              className="px-4 py-2 bg-[#4A7807] text-white rounded-md hover:bg-[#3b6405] transition-colors"
+              className="px-4 py-2 bg-[#47603D] text-white rounded-md hover:bg-[#3b6405] transition-colors"
             >
               Clear Filters
             </button>
@@ -365,7 +365,7 @@ const Shop = () => {
                   />
                 </div>
 
-                <div className="p-4">
+                <div className="p-4 bg-[#FCD8D4]">
                   {/* Ratings */}
                   <div className="flex justify-center space-x-1 mb-3 text-yellow-400">
                     {[...Array(product.rating)].map((_, i) => (
@@ -393,7 +393,7 @@ const Shop = () => {
 
                   {product.inStock ? (
                     <Link to={`/product/${product.id}`}>
-                      <button className="w-full bg-[#4A7807] text-white py-2 px-4 rounded-md 
+                      <button className="w-full bg-[#47603D] text-white py-2 px-4 rounded-2xl 
                                      hover:bg-[#3b6405] transition-colors font-medium shadow-sm hover:shadow-md">
                         View Details
                       </button>
@@ -401,7 +401,7 @@ const Shop = () => {
                   ) : (
                     <button
                       disabled
-                      className="w-full bg-gray-400 text-white py-2 px-4 rounded-md 
+                      className="w-full bg-gray-400 text-white py-2 px-4 rounded-2xl 
                                  cursor-not-allowed font-medium"
                     >
                       Out of Stock
