@@ -365,7 +365,7 @@ const Shop = () => {
                   />
                 </div>
 
-                <div className="p-4 bg-[#FCD8D4]">
+                <div className="p-4 bg-white">
                   {/* Ratings */}
                   <div className="flex justify-center space-x-1 mb-3 text-yellow-400">
                     {[...Array(product.rating)].map((_, i) => (

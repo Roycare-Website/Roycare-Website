@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router";
 import { Heart, Menu, ShoppingCart } from "lucide-react";
-
+import Logo from "../assets/images/logo.png"
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,9 +9,16 @@ const Navbar = () => {
   return (
     <nav className="w-full shadow-sm bg-white px-6 py-4 flex justify-between items-center sticky top-0 z-50 ">
       {/* Logo */}
-      <div className="text-2xl font-bold text-[#163A12]">
-        <Link to="/"  className="hover:text-[#466C00] ">ROYCARE</Link>
+      <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-[#47603D] shadow-md">
+        <Link to="/">
+          <img
+            src={Logo}
+            alt="Roycare"
+            className="w-full h-full object-cover"
+          />
+        </Link>
       </div>
+
 
       {/* Center Nav Links (desktop only) */}
       <div className="hidden md:flex gap-8 text-sm font-medium text-gray-800 uppercase">

@@ -242,7 +242,7 @@ export default function Footer() {
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
-        className="fixed bottom-8 right-8 bg-[#466C00] hover:bg-green-800 text-white p-4 rounded-full shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-offset-2 z-50 hover:shadow-2xl transform hover:scale-110 hover:-translate-y-1"
+        className="fixed bottom-8 right-8 bg-[#47603D] hover:bg-[#466C00] text-white p-4 rounded-full shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-offset-2 z-50 hover:shadow-2xl transform hover:scale-110 hover:-translate-y-1"
         aria-label="Scroll to top of page"
       >
         <ChevronUp className="h-5 w-5" />

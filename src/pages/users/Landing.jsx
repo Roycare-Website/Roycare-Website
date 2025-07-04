@@ -484,7 +484,7 @@ const Landing = () => {
                             </div>
                         </div>
                         <div className="mt-6">
-                            <button className="border border-amber-200 text-amber-100 px-10 py-3 uppercase tracking-wider text-sm inline-flex items-center hover:bg-amber-800 transition duration-300">
+                            <button className="border border-amber-200 text-amber-100 px-10 py-3 uppercase tracking-wider text-sm inline-flex items-center hover:bg-[#FCD8D4] transition duration-300">
                                 <span className="mr-2">-</span>
                                 <span>SUBMIT NOW</span>
                                 <span className="ml-2">-</span>

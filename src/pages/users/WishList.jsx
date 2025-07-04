@@ -29,7 +29,7 @@ const WishList = () => {
   };
 
   return (
-    <div className="p-6 max-w-4xl mx-auto space-y-6">
+    <div className="bg-[#FCD8D4] p-6 max-w-4xl mx-auto space-y-6">
       <h2 className="text-2xl font-bold">My Wishlist</h2>
 
       {wishlistItems.length === 0 ? (
@@ -56,7 +56,7 @@ const WishList = () => {
               <div className="flex items-center gap-3">
                 <button
                   onClick={() => moveToCart(item)}
-                  className="bg-[#466C00] text-white px-3 py-1 rounded hover:bg-teal-700 text-sm"
+                  className="bg-[#47603D] text-white px-3 py-1 hover:bg-[#466C00] rounded-2xl text-sm"
                 >
                   Move to Cart
                 </button>

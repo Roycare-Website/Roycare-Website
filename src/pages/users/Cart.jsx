@@ -40,7 +40,7 @@ const Cart = () => {
   );
 
   return (
-    <div className="p-6 max-w-4xl mx-auto space-y-6">
+    <div className="bg-[#FCD8D4] p-6 max-w-4xl mx-auto space-y-6">
       <h2 className="text-2xl font-bold">Your Cart</h2>
 
       {cartItems.length === 0 ? (
@@ -98,7 +98,7 @@ const Cart = () => {
 
           <div className="text-right space-y-4">
             <p className="text-xl font-bold">Total: GHS {totalAmount}</p>
-            <button className="bg-[#466C00] text-white px-6 py-2 rounded hover:bg-teal-700">
+            <button className="bg-[#47603D] text-white px-6 py-2  hover:bg-[#466C00] rounded-2xl">
               Proceed to Checkout
             </button>
           </div>
